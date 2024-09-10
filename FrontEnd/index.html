@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Response Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Crowdsourced Disaster Response Platform</h1>
+            <p>Real-Time Relief Efforts at Your Fingertips</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#report">Submit Report</a></li>
+                <li><a href="#resources">Request Resources</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="section">
+        <div class="home-content">
+            <h2>Welcome to the Disaster Response Platform</h2>
+            <p>This platform allows users to submit real-time disaster information and request help, helping emergency responders to act faster and more efficiently.</p>
+            <a href="#features" class="button">Explore Features</a>
+        </div>
+        <div class="home-image">
+            <!-- <img src="dmr.jpg" alt="Disaster Response Image"> -->
+        </div>
+    </section>
+    <!-- Other sections of your HTML code -->
+
+<!-- Adding Social Media Buttons -->
+<div class="section">
+    <h2>Connect with Us</h2>
+    <p>Follow us on social media to stay updated!</p>
+    
+    <button class="social-button facebook" onclick="openFacebook()">Open Facebook</button>
+    <button class="social-button twitter" onclick="openTwitter()">Open Twitter</button>
+    <button class="social-button instagram" onclick="openInstagram()">Open Instagram</button>
+</div>
+
+<!-- Script for opening social media accounts -->
+<script>
+    function openFacebook() {
+        window.open("https://www.facebook.com/", "_blank");
+    }
+
+    function openTwitter() {
+        window.open("https://x.com/?lang=en", "_blank");
+    }
+
+    function openInstagram() {
+        window.open("https://www.instagram.com/_pragsssssss/?hl=en", "_blank");
+    }
+</script>
+
+<!-- Other sections of your HTML code -->
+
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <h2>Platform Features</h2>
+        <div class="features-grid">
+            <div class="feature-box">
+                <img src="real time data.jpg" alt="Real-Time Data Collection">
+                <h3>Real-Time Data Collection</h3>
+                <p>Submit information such as damage reports, flood levels, or emergency needs through the app.</p>
+            </div>
+            <div class="feature-box">
+                <img src="geotagging.png" alt="Geo-Tagging">
+                <h3>Geo-Tagging</h3>
+                <p>Use GPS to tag exact locations of reported incidents for better mapping and response.</p>
+            </div>
+            <div class="feature-box">
+                <img src="food.jpg" alt="Resource Coordination">
+                <h3>Resource Coordination</h3>
+                <p>Request or offer resources such as food, medical supplies, and shelter through the app.</p>
+            </div>
+            <div class="feature-box">
+                <img src="resourcee coordination.jpg" alt="Communication Hub">
+                <h3>Communication Hub</h3>
+                <p>Coordinate with volunteers, responders, and organizations via the integrated communication tools.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Submit Report Section -->
+    <section id="report" class="section">
+        <h2>Submit Disaster Report</h2>
+        <form id="disasterReportForm">
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" placeholder="Enter location" required>
+            
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" placeholder="Enter details about the disaster" required></textarea>
+            
+            <label for="resources">Required Resources:</label>
+            <select id="resources" name="resources">
+                <option value="food">Food</option>
+                <option value="shelter">Shelter</option>
+                <option value="medical">Medical Supplies</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <button type="submit" class="button">Submit Report</button>
+        </form>
+    </section>
+
+    <!-- Request Resources Section -->
+    <section id="resources" class="section">
+        <h2>Request Resources</h2>
+        <form id="resourceRequestForm">
+            <label for="resourceType">Resource Type:</label>
+            <select id="resourceType" name="resourceType">
+                <option value="food">Food</option>
+                <option value="shelter">Shelter</option>
+                <option value="medical">Medical Supplies</option>
+            </select>
+            
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" placeholder="Enter quantity" required>
+            
+            <button type="submit" class="button">Request Resource</button>
+        </form>
+    </section>
+    
+    <form id="uploadForm" enctype="multipart/form-data">
+        <label for="photo">Upload a Real-Time Photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*" required>
+        <button type="submit" class="button">Submit Photo</button>
+    </form>
+    
+    <!-- Display uploaded image preview -->
+    <div id="imagePreview"></div>
+    
+    <!-- Chatbot Section -->
+    <section id="chatbot" class="section">
+        <h2>Chat with Our Bot</h2>
+        <div id="chat-container">
+            <div id="chat-messages"></div>
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button onclick="sendMessage()" class="button">Send</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <p>Contact us: disasterresponse@example.com</p>
+            <div class="social-icons">
+                <a href="#"><img src="facebook2.jpg" alt="Facebook"></a>
+                <a href="#"><img src="x.jpg" alt="Twitter"></a>
+                <a href="#"><img src="insta.jpeg" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
